@@ -71,7 +71,6 @@ class Node
 			@children.each do |c|
 				txt += c.print_tree(depth + 1) + "\n"
 			end
-			#txt += "\n"
 		else
 			txt += @text
 		end
