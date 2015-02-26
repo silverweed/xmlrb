@@ -18,4 +18,5 @@ root = parser.parse(xml)[:node]
 ```
 
 I wrote this quite in a hurry, so it's not very nice and it probably needs some
-reorganization, but it's working. I'll eventually document the `Node` class better.
+reorganization, but it's working. Kinda.
+I'll eventually document the `Node` class better.

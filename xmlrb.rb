@@ -84,6 +84,11 @@ class Node
 end
 
 class Parser 
+	def parse_header(xml)
+		return "" unless xml.start_with? "<?"
+		return xml[0..xml[2..-1].index('?')+3]
+	end
+
 	# Builds the XML tree from a string by finding the first tag and recursively calling itself
 	# on the tag's content. Returns a Node, the text that was skipped before finding one, all
 	# the text that was parsed this time (used for recursion mostly) and whether we terminated
@@ -185,8 +190,9 @@ class Parser
 					if tag[-1] == "/" 
 						return_data.call false
 					elsif tag[0] == "?"
-						# for now we ignore the XML header
-						get_this_tag xml
+						# for now we ignore the XML header.
+						# if you want it, use parse_header.
+						tag, attribs = "", ""
 					end
 				end
 			rescue EOFError
