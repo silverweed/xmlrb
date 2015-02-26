@@ -20,3 +20,6 @@ root = parser.parse(xml)[:node]
 I wrote this quite in a hurry, so it's not very nice and it probably needs some
 reorganization, but it's working. Kinda.
 I'll eventually document the `Node` class better.
+
+## Requires
+At least Ruby 1.9. I tested it with Ruby 2.x, but it *should* work with 1.9 too. It certainly doesn't work with 1.8.x.
