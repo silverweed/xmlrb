@@ -1,6 +1,8 @@
 # xmlrb
 Tiny XML parser for Ruby
 
+**Edit**: this library is fundamentally unreliable. Use Nokogiri instead, it's way faster and more robust. Maybe one day I'll fix this, but as of today, it's useless.
+
 ## ...why?
 I needed to parse XML in Ruby so I wrote my thing. It's nothing fancy: just a single file
 exposing a "XML" module containing 2 classes: one for representing XML Nodes (named, cleverly
